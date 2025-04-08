@@ -1,14 +1,8 @@
 import { combineReducers } from 'redux'
+import todoReducer from '../todo/todoReducer'
 
-const todo = (state = { desc: 'ler livro', list: [{ _id: 1, desc: 'pagar fatura', done: true }] }, action) => {
-  switch (action.type) {
-    default:
-      return state
-  }
-}
-
-const rootReducer = combineReducers({
-  todo
+const rootReducer = combineReducers({ 
+    todo: todoReducer
 })
 
 export default rootReducer
